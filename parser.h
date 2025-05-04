@@ -15,6 +15,11 @@
  * no SCHMA handling, no requiring HEAD and TRLR, etc.
  */
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 #include <stdlib.h>
 #include <string.h>
 
@@ -58,4 +63,9 @@ void freeGedStructure(GedStructure *g);
  * - 7 will enforce v7 syntactic rules
  */
 GedStructure *parseGEDCOM(char *input, int dialect, const char **errmsg, size_t *errline);
+
+#ifdef __cplusplus
+}
+#endif
+
 
